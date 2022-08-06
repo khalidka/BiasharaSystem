@@ -1,0 +1,30 @@
+
+<%= simple_form_for(@service) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs row">
+    <div class="col-md-6">
+        <%= f.input :name %>
+   </div>
+    <div class="col-md-3">
+      <%= f.association :department %>
+    </div>
+    <div class="col-md-3">
+      <select class="form-select form-select-md mb-2 mt-4" aria-label=".form-select-lg example">
+      <%= f.label :service_type %>
+        <option selected>Consultation</option>
+    </select>
+  
+    </div>
+      <%= f.input :price %>
+      <div class="col-md-12">
+        <%= f.input :description %>
+      </div>
+ 
+  </div>
+<br>
+  <div class="form-actions col d-flex flex-row-reverse">
+    <%= f.button :submit, "Save", class: "btn btn-rounded text-white fa fa-save", style: "background-color: #E67436; border-color: #E67436; text-decoration: none; " %>
+  </div>
+<% end %>

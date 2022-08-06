@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg fixed-top bg-white mb-0 shadow-lg">
+    <%= link_to 'BiasharaApp', root_path, class: "navbar-brand fw-normal text-primary ms-5" %>
+    <button class="btn btn-light navbar-toggler mx-5">
+        <i class="bi bi-list text=primary"></i>
+    </button>
+    <% if user_signed_in? %> 
+        <div class="row">
+            <div class="col">
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <div class="dropdown" id="patient-dropdown">
+                            <button class="btn btn-light dropdown-toggle border-end" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-people-fill"></i>
+                                Patients
+                            </button>
+                            <ul class="dropdown-menu" id="patient-list">
+                                <li class="dropdown-item">
+                                    <i class="bi bi-people-fill"></i>
+                                <%= link_to 'All Patients', patients_path, style: "text-decoration: none;", class: "text-dark" %>
+                                </li>
+                            <li class="dropdown-item">
+                                    <i class="bi bi-people-fill"></i>
+                                Patients Groups
+                            </li>
+                            <li class="dropdown-item">
+                                    <i class="bi bi-plus"></i>
+                                    <%= link_to 'New Patient', new_patient_path, style: "text-decoration: none;", class: "text-dark" %>
+                            </li>
+                            </ul>
+                    </div> 
+                <button class="btn btn-light border-end">
+                        <i class="bi bi-calendar3"></i>
+                        Appointments
+                </button>
+                <button class="btn btn-light border-end">
+                        <i class="bi bi-person-fill"></i>
+                        Check INs
+                </button>
+                <div class="dropdown" id="services-dropdown">
+                        <button class="btn btn-light dropdown-toggle border-end" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-box-seam-fill"></i>
+                            Services
+                        </button>
+                        <ul class="dropdown-menu" id="service-list">
+                            <li class="dropdown-item">
+                                <i class="bi bi-plus-lg"></i>
+                                <%= link_to 'New Services', new_service_path, style: "text-decoration: none;", class: "text-dark" %>
+                            </li>
+                            <li class="dropdown-item">
+                                <i class="bi bi-circle"></i>
+                                <%= link_to 'All Services', services_path, style: "text-decoration: none;", class: "text-dark" %>
+                            </li>
+                        </ul>
+                </div>
+                <div class="justify-content-end">
+                    <% if notice %>
+                        <%= render 'layouts/alert' %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+       </div>
+        <div class="col d-flex flex-row-reverse mx-5">
+            <div class="dropdown">
+                <button class="btn btn-info dropdown-toggle border-end mx-2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-fill"></i>
+                    User
+                </button>
+                <ul class="dropdown-menu">  
+                    
+                        <li class="nav-item dropdown-item">
+                        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link" %>
+                        </li>
+                    <li class="nav-item dropdown-item">
+                        <%= link_to 'Edit User', edit_user_registration_path, class: "nav-link" %>
+                    </li>
+                
+                </ul>
+            </div>
+            <button class="btn btn-primary" id="number-input">
+                <i class="bi bi-person-fill"></i>
+                Check input
+            </button>
+            <button class="btn btn-primary mx-2" id="number-input">
+                <i class="bi bi-plus-lg"></i>
+                <%= link_to 'New Transaction', products_path, class: "nav-link" %>
+            </button>
+
+            <i class="bi bi-search border-end mx-2"></i>
+            <i class="bi bi-bell-fill border-end mx-2"></i>
+        </div>    
+    <% else %>
+             <div class="col dropdown d-flex flex-row-reverse border-end ">
+                <button class="btn btn-info dropdown-toggle border-end mx-2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-fill"></i>
+                    User
+                </button>
+                <ul class="dropdown-menu text-right">  
+                    
+                    <li class="dropdown-item">
+                    <%= link_to 'Sign In',  new_user_session_path, class: "nav-link" %>
+                    </li>
+                    <li class="dropdown-item">
+                    <%= link_to 'Sign Up',  new_user_registration_path, class: "nav-link" %>
+                    </li>
+                
+                </ul>
+            </div>
+            
+      
+    <% end %> 
+    
+</nav>

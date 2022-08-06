@@ -1,0 +1,12 @@
+<div class="card text-center container shadow p-3 mb-5 bg-white rounded">
+  <div class="card-header">
+    <h4>Editing Patient</h4>
+  </div>
+  <div class="card-body">
+    <%= render 'form', patient: @patient %>
+  </div>
+  <div class="card-footer text-muted">
+    <%= link_to 'Show', @patient, class: "btn btn-primary" %> 
+    <%= link_to 'Back', patients_path, class: "btn btn-dark" %>
+  </div>
+</div>

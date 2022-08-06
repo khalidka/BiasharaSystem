@@ -1,0 +1,168 @@
+ <div class="card container shadow p-3 mb-5 bg-white rounded">
+  <div class="card-header">
+    Record Sale
+  </div>
+  <div class="card-body">
+     <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Product/Service</label>
+                    <select data-vat="0.16" id="productsList" class="form-control">
+                        <option value="prompt">Select Product</option>
+                        <option data-bp="500.0" data-category="Pills" data-id="12" data-name="Paracetamol" data-quantity="200.0" data-sp="1200" data-type="Product" data-units="Tablets" data-vatable="No" value="12">
+                        Paracetamol
+                        </option>
+                        <option data-bp="50.0" data-category="Pills" data-id="13" data-name="Tylenol" data-quantity="100.0" data-sp="100" data-type="Product" data-units="Tablets" data-vatable="No" value="13">
+                        Tylenol
+                        </option>
+                        </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Quantity</label>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon" id="sizing-addon1">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                        </span>
+                        <input id="quantity" type="text" class="form-control" aria-describedby="sizing-addon1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="alert alert-success" role="alert">
+                    <strong>Summary</strong>
+                    <br>
+                    <span id="summary"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Selling Price</label>
+                    <input id="sp" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Total Amount</label>
+                    <div class="input-group"style="cursor: pointer;">
+                        <input id="totalAmount" type="text" class="form-control" aria-describedby="basic-addon2">
+                        <span class="input-group-addon addAmount" id="basic-addon2">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            Add
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered table-hover table-sriped">
+                    <tr>
+                        <th>Name</th>
+                        <th>QTY</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>VAT</th>
+                        <th></th>
+                    </tr>
+                    <tbody id="amountList">
+                        <tr>
+                            <th></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-12">
+                <i class="fa fa-list" aria-hidden="true"></i>
+                <strong>Summary</strong>
+            </div>
+            <hr>
+            <div class="col-md-3">
+                <span>Total: 0</span>
+            </div>
+            <div class="col-md-3">
+                <span class="pull-right">Quantity: 0</span>
+            </div>
+            <div class="col-md-2">
+                <span>Payment Method: </span>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <select name="" id="" class="form-control">
+                        <option value="">Cash</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <span>Amount Paid(Initial):</span>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="0">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <span>Ref #:</span>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <span>Balance:</span>
+            </div>
+            <div class="col-md-4">
+                <span>0</span>
+            </div>
+            <div class="col-md-2">
+                <span>Order #:</span>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Date</span>
+                    <input type="text" class="form-control" placeholder="Enter date here by selecting from the popup" aria-describedby="basic-addon1">
+                  </div>
+            </div>
+            <div class="col-md-2">
+                <span>Sales Rep:</span>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <select name="" id="" class="form-control">
+                        <option value="">Jane</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+  </div>
+  <div class="col card-footer text-muted d-flex flex-row-reverse">
+    <div class="actions">
+        <button type="button" class="btn btn-danger btn-md btn-rounded">
+            <i class="bi bi-x-md"></i>
+            Reset
+        </button>
+        <button type="button" class="btn btn-">
+
+        </button>
+    </div>
+  </div>
+</div>
+ 
+ 
